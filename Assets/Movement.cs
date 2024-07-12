@@ -19,7 +19,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Q))
+        Debug.Log("velocity" + rb.velocity);
+        if (Input.GetKey(KeyCode.Q))
         {
             rb.AddForce(new Vector3(0, 0, -10), ForceMode.Force);
             Debug.Log("Q");
@@ -40,9 +41,20 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             rb.AddForce(new Vector3(0, 0, -0.1f), ForceMode.VelocityChange);
-            Debug.Log("velocity" + rb.velocity);
+           
             Debug.Log("R");
         }
+        if (rb.velocity.z >= -50)
+        {
+            float sppedd = rb.velocity.z;
+            sppedd = rb.velocity.z * 0.7f;
+        }
+        if (rb.velocity.z >= -30)
+        {
+            float sppedd = rb.velocity.z;
+            sppedd = rb.velocity.z*0.3f ;
+        }
+
 
     }
 }
