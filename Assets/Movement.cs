@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         Debug.Log("velocity" + rb.velocity);
-        if (Input.GetKey(KeyCode.Q))
+        /*if (Input.GetKey(KeyCode.Q))
         {
             rb.AddForce(new Vector3(0, 0, -10), ForceMode.Force);
             Debug.Log("Q");
@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour
             rb.AddForce(new Vector3(0, 0, -10), ForceMode.Impulse);
             Debug.Log("E");
         }
-
+        */
 
         if (Input.GetKey(KeyCode.R))
         {
@@ -44,6 +44,7 @@ public class Movement : MonoBehaviour
            
             Debug.Log("R");
         }
+       
         if (rb.velocity.z >= -50)
         {
             float sppedd = rb.velocity.z;
